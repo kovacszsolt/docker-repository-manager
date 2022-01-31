@@ -1,9 +1,9 @@
 {
   "name": "Demo Github Repository",
   "url": {
-    "base": "/assets/github.server/v2/",
-    "catalog": "_catalog",
-    "tagList": "/tags/list/",
+    "base": "https://kovacszsolt.github.io/docker-repository-manager/assets/github.server/v2/",
+    "catalog": "catalog.json",
+    "tagList": "/tags/list.json",
     "tagInfo": "/manifests/tag/",
     "tagInfoLayers": "/manifests/layers/"
   }
