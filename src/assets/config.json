@@ -1,0 +1,10 @@
+{
+  "name": "Demo Repository",
+  "url": {
+    "base": "https://localhost/v2/",
+    "catalog": "_catalog",
+    "tagList": "/tags/list/",
+    "tagInfo": "/manifests/",
+    "tagInfoLayers": "/manifests/"
+  }
+}

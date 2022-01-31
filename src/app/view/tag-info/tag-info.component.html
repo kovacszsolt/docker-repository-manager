@@ -1,0 +1,30 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <a [routerLink]="'/'" color="primary" mat-flat-button>
+      <mat-icon>home</mat-icon>
+    </a>
+    <a [routerLink]="['/',imageName]" color="primary" mat-flat-button>{{imageName}}</a>
+    <a [routerLink]="['/',imageName,tagName]" color="primary" mat-flat-button>{{tagName}}</a>
+  </mat-toolbar-row>
+</mat-toolbar>
+<div class="content" *ngIf="!isLoading">
+  <mat-card>
+    <mat-card-title>Architecture</mat-card-title>
+    <mat-card-content>{{history.architecture}}</mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-title>OS</mat-card-title>
+    <mat-card-content>{{history.os}}</mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-title>Created</mat-card-title>
+    <mat-card-content>{{history.created | date:'medium'}}</mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-title>Size</mat-card-title>
+    <mat-card-content>{{history.size | size}}</mat-card-content>
+  </mat-card>
+  <button (click)="delete($event)" color="warn" mat-raised-button>Delete this Image</button>
+</div>
+<mat-spinner *ngIf="isLoading"></mat-spinner>
