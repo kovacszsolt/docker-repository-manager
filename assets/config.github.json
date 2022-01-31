@@ -2,8 +2,8 @@
   "name": "Demo Github Repository",
   "url": {
     "base": "/assets/github.server/v2/",
-    "catalog": "_catalog",
-    "tagList": "/tags/list/",
+    "catalog": "catalog.json",
+    "tagList": "/tags/list.json",
     "tagInfo": "/manifests/tag/",
     "tagInfoLayers": "/manifests/layers/"
   }
