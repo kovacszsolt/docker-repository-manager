@@ -26,4 +26,4 @@ jobs:
           file: ./Dockerfile
           builder: ${{ steps.buildx.outputs.name }}
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/docker-registry-manager:$(date +%s)
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/docker-registry-manager:latest
