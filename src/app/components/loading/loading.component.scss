@@ -1,0 +1,17 @@
+:host {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h2 {
+  position: relative;
+  top: -64px;
+}
+
+.counter {
+  color: white;
+  text-align: center;
+}

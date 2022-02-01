@@ -1,0 +1,10 @@
+{
+  "name": "{{REPOSITORY_NAME}}",
+  "url": {
+    "base": "https://kovacszsolt.github.io/docker-repository-manager/assets/github.server/v2/",
+    "catalog": "catalog.json",
+    "tagList": "/tags/list.json",
+    "tagInfo": "/manifests/tag/",
+    "tagInfoLayers": "/manifests/layers/"
+  }
+}

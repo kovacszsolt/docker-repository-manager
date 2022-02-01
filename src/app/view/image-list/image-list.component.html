@@ -1,0 +1,15 @@
+<table *ngIf="!loading" [dataSource]="imageList" class="mat-elevation-z8" mat-table>
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef>Image name</th>
+    <td mat-cell *matCellDef="let element">
+      <a mat-flat-button [routerLink]="['/', element.name]">
+        {{element.name}}
+      </a>
+    </td>
+  </ng-container>
+
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+<app-loading *ngIf="loading" [title]="'Read Image List'"></app-loading>

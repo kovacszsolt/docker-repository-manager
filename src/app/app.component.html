@@ -1,0 +1,15 @@
+<mat-toolbar class="toolbar" color="primary">
+  <a [routerLink]="'/'" color="primary" mat-flat-button>{{config.name}}</a>
+  <div>
+    <button [matMenuTriggerFor]="menu" mat-button>
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <a [routerLink]="'information'" mat-menu-item>Information</a>
+    </mat-menu>
+  </div>
+</mat-toolbar>
+<div class="root-viewport">
+  <router-outlet *ngIf="!loading"></router-outlet>
+</div>
+<app-loading *ngIf="loading" [title]="'Read Config'"></app-loading>

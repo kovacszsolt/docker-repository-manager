@@ -1,0 +1,29 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <a [routerLink]="'/'" color="primary" mat-flat-button>
+      <mat-icon>home</mat-icon>
+    </a>
+    <a [routerLink]="['/',imageName]" color="primary" id="title" mat-flat-button>{{imageName}}</a>
+  </mat-toolbar-row>
+</mat-toolbar>
+<table [dataSource]="tagList" aria-describedby="title" class="mat-elevation-z8" mat-table>
+  <ng-container matColumnDef="name">
+    <th *matHeaderCellDef id="table_th_name" mat-header-cell>Tag name</th>
+    <td mat-cell *matCellDef="let element">
+      <a mat-flat-button [routerLink]="['/',imageName, element]">
+        {{element}}
+      </a>
+    </td>
+  </ng-container>
+  <ng-container matColumnDef="action">
+    <th *matHeaderCellDef id="table_th_action" mat-header-cell></th>
+    <td *matCellDef="let element" mat-cell>
+      <button (click)="deleteImage($event,element)" *ngIf="['master', 'develop'].indexOf(element) === -1"
+              mat-icon-button matTooltip="Delete Image">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
