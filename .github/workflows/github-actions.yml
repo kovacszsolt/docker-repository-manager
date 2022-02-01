@@ -9,7 +9,7 @@ jobs:
           node-version: '14'
 
       - name: npm install
-        run: npm install
+      - run: npm install
 
       - name: npm build
       - run: npm run build --configuration=docker
