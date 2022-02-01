@@ -12,3 +12,9 @@ jobs:
 
       - name: Build application
         run: npm run build:docker
+
+      - name: Build the Docker image
+        run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+
+      - name: Build the Docker image
+        run: docker build . --file Dockerfile --tag kovacszsolt/docker-registry-manager:$(date +%s)
