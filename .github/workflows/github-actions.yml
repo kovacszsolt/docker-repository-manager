@@ -4,6 +4,9 @@ jobs:
   create-artifact:
     runs-on: ubuntu-latest
     steps:
+      - name: Check out the repo
+        uses: actions/checkout@v2
+
       - name: npm install
         run: npm i
 
