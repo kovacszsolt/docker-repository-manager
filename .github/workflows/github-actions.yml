@@ -1,11 +1,12 @@
-name: learn-github-actions
+name:Deploy to Docker Hub
 on: [push]
 jobs:
-  check-bats-version:
+  create-artifact:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
-      - run: npm install
+      - name: npm install
+      - run: npm i
