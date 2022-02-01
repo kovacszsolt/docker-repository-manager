@@ -7,7 +7,8 @@ jobs:
       - name: Check out the repo
         uses: actions/checkout@v2
 
-      - name: npm install
+      - name: install npm modules
         run: npm i
 
-
+      - name: Build application
+        run: npm run build:docker
