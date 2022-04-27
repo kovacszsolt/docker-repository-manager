@@ -59,11 +59,11 @@ export class AppTagInfoComponent implements OnInit {
       if (result) {
         this.remoteService.imageDelete(this.imageName, this.hashCode).subscribe(() => {
             this.snackBar.open('Delete Successful');
-            this.router.navigate(['/', this.imageName]);
+           this.router.navigate(['/', this.imageName]);
 
           }, _ => {
             this.snackBar.open('Delete Successful');
-            this.router.navigate(['/', this.imageName]);
+         this.router.navigate(['/', this.imageName]);
           }
         );
       }
