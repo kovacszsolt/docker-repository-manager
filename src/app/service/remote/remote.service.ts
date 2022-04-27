@@ -60,7 +60,7 @@ export class RemoteService {
   }
 
   imageDelete(imageName: string, hashCode: string): Observable<any> {
-    return this.http.delete(`${this.configService.config.url}/${imageName}/manifests/${hashCode}`);
+    return this.http.delete(`${this.configService.config.url.base}${imageName}/manifests/${hashCode}`);
   }
 
 }

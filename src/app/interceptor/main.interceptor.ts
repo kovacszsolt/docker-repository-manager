@@ -6,7 +6,6 @@ import {Router} from '@angular/router';
 
 @Injectable()
 export class AppMainInterceptor implements HttpInterceptor {
-  private counter = 0;
 
   constructor(private router: Router) {
   }
@@ -20,7 +19,7 @@ export class AppMainInterceptor implements HttpInterceptor {
         return errors.pipe(
           switchMap((error) => {
             if (error.status === 0 && error.statusText === 'Unknown Error') {
-              this.router.navigateByUrl('/error/no_repository');
+           //   this.router.navigateByUrl('/error/no_repository');
               return throwError(error);
             } else {
               return throwError(error);
